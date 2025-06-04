@@ -1,3 +1,0 @@
-1. Retravailler le texte de présentation
-2. Reprendre la photo du snake
-3. Récup la photo du projet perso
