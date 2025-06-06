@@ -434,6 +434,9 @@ nav ul li a:hover {
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    width: 100%;
+    max-width: 568px;
+    margin: 0 auto;
 }
 
 .card:hover {
@@ -463,6 +466,26 @@ nav ul li a:hover {
     color: #666;
 }
 
+/* Pour le menu de filtre du portfolio */
+
+.portfolio-filters {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.portfolio-filters button {
+  margin: 0 10px;
+  padding: 8px 16px;
+  border: none;
+  background-color: #eee;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.portfolio-filters button:hover {
+  background-color: #ccc;
+}
 
 /* Footer */
 footer {

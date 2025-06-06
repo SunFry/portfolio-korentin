@@ -103,8 +103,16 @@
                 <h4>Retrouvez ici mes différents travaux réalisés au cours ou en parallèle de mon cursus.</h4>
             </div>
 
+            <div class="portfolio-filters">
+                <button data-filter="all">Tous</button>
+                <button data-filter="competence1">Compétence 1</button>
+                <button data-filter="competence2">Compétence 2</button>
+                <button data-filter="competence3">Compétence 3</button>
+            </div>
+
             <div class="portfolio-grid">
-                <article class="card">
+
+                <article class="card" data-category="competence1">
                     <img src="assets/images/snake_terminal.jpg" alt="Snake">
                     <div class="card-description">
                         <h3>Projet jeu Snake</h3>
@@ -112,7 +120,7 @@
                     </div>
                 </article>
 
-                <article class="card">
+                <article class="card" data-category="competence2">
                     <img src="assets/images/placeholder.png" alt="Projet personnel : Pyfarm">
                     <div class="card-description">
                         <h3>Projet Python - PyFarm</h3>
@@ -122,6 +130,7 @@
                         </p>
                     </div>
                 </article>
+
 
                 
 
@@ -152,5 +161,24 @@
     </footer>
 
     
+    <script>
+        const filterButtons = document.querySelectorAll(".portfolio-filters button");
+        const cards = document.querySelectorAll(".portfolio-grid .card");
+
+        filterButtons.forEach(button => {
+            button.addEventListener("click", () => {
+            const filter = button.getAttribute("data-filter");
+
+            cards.forEach(card => {
+                const categories = card.getAttribute("data-category").split(" ");
+                if (filter === "all" || categories.includes(filter)) {
+                card.style.display = "block";
+                } else {
+                card.style.display = "none";
+                }
+            });
+            });
+        });
+    </script>
 </body>
 </html>
