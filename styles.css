@@ -431,6 +431,7 @@ nav ul li a:hover {
 }
 
 .card {
+    text-decoration: none;
     background-color: #fff;
     border-radius: 10px;
     overflow: hidden;
@@ -441,7 +442,6 @@ nav ul li a:hover {
     margin: 0 auto;
     opacity: 1;
     transform: scale(1);
-    text-decoration: none;
 }
 
 .card.hidden {
