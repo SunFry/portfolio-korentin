@@ -441,6 +441,7 @@ nav ul li a:hover {
     margin: 0 auto;
     opacity: 1;
     transform: scale(1);
+    text-decoration: none;
 }
 
 .card.hidden {
