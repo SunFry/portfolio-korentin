@@ -437,7 +437,7 @@ nav ul li a:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     width: 100%;
-    max-width: 568px;
+    max-width: 376px;
     margin: 0 auto;
     opacity: 1;
     transform: scale(1);
@@ -480,22 +480,27 @@ nav ul li a:hover {
 /* Pour le menu de filtre du portfolio */
 
 .portfolio-filters {
-  text-align: center;
-  margin-bottom: 20px;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    margin: 0 auto 20px auto;
 }
 
 .portfolio-filters button {
-  margin: 0 10px;
-  padding: 8px 16px;
-  border: none;
-  background-color: #eee;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s;
+    margin: 0 10px;
+    padding: 8px 16px;
+    border: none;
+    background-color: #eee;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
 .portfolio-filters button:hover {
-  background-color: #ccc;
+    background-color: #ccc;
 }
 
 /* Pour l'animation du menu filtre */
