@@ -29,7 +29,7 @@
     <main>
         <section id="accueil-intro">
             <h1>Korentin Parveau Le Saint</h1>
-            <h2>Etudiant en Informatique</h2>
+            <h2>En recherche de stage</h2>
             <div class="button-group">
                 <a href="#description_perso">À propos de moi</a>
                 <a href="assets/dl-content/cv_korentin_parveaulesaint.pdf" download>Téléchargez mon CV</a>
@@ -166,19 +166,25 @@
         const cards = document.querySelectorAll(".portfolio-grid .card");
 
         filterButtons.forEach(button => {
-            button.addEventListener("click", () => {
-            const filter = button.getAttribute("data-filter");
 
-            cards.forEach(card => {
-                const categories = card.getAttribute("data-category").split(" ");
-                if (filter === "all" || categories.includes(filter)) {
-                card.style.display = "block";
-                } else {
-                card.style.display = "none";
-                }
-            });
+            button.addEventListener("click", () => {
+                const filter = button.getAttribute("data-filter");
+
+                cards.forEach(card => {
+
+                    const categories = card.getAttribute("data-category").split(" ");
+
+                    const shouldShow = filter === "all" || categories.includes(filter);
+
+                    if (shouldShow) {
+                        card.classList.remove("hidden");
+                    } else {
+                        card.classList.add("hidden");
+                    }
+                });
             });
         });
     </script>
+
 </body>
 </html>

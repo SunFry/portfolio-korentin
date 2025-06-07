@@ -422,10 +422,12 @@ nav ul li a:hover {
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
+    gap: 20px;
     padding: 0 1rem;
     max-width: 1200px;
     margin: 0 auto;
+    transition: all 0.4s ease;
+    position: relative;
 }
 
 .card {
@@ -433,10 +435,19 @@ nav ul li a:hover {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
     width: 100%;
     max-width: 568px;
     margin: 0 auto;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.card.hidden {
+  opacity: 0;
+  transform: scale(0.5);
+  pointer-events: none;
+  position: absolute;
 }
 
 .card:hover {
@@ -486,6 +497,10 @@ nav ul li a:hover {
 .portfolio-filters button:hover {
   background-color: #ccc;
 }
+
+/* Pour l'animation du menu filtre */
+
+
 
 /* Footer */
 footer {
