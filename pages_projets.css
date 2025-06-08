@@ -84,6 +84,24 @@ main {
     padding: 2rem 1rem;
 }
 
+/* Section titre du projet */
+
+.project-title {
+    background: linear-gradient(to bottom, #163853, #1e445f);
+    padding: 2.5rem 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    color: white;
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.project-title h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
 /* Section STAR */
 .star-section {
     display: flex;
@@ -93,13 +111,22 @@ main {
 }
 
 .star-section article {
-    background-color: #ffffff;
-    padding: 2.2rem; /* Plus de padding = blocs plus grands */
+    padding: 3.5rem; /* Plus de padding = blocs plus grands */
     border-radius: 10px;
     background: linear-gradient(to bottom, #163853, #1e445f);
     color: white;
 
-    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.50)
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.50);
+
+    text-align: center;
+}
+
+.star-section article p {
+    max-width: 900px;
+    font-size: large;
+    justify-self: center;
+    text-align: justify;
+    line-height: 1.7;
 }
 
 .star-section h2 {
@@ -112,23 +139,35 @@ main {
 
 
 /* Section des liens */
-.project-links {
+.project-media {
     background: linear-gradient(to bottom, #163853, #1e445f);
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.50);
+    margin-bottom: 2rem;
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Réutilise ton style de lien déjà existant */
+.project-media section {
+    background: none; /* hérite du fond parent */
+    padding: 0;
+    margin: 1rem;
+    box-shadow: none;
     text-align: center;
 }
 
-.project-links h2 {
-    margin-bottom: 0.8rem;
+.project-media section h2 {
     color: white;
     font-size: 1.3rem;
+    margin-bottom: 0.6rem;
 }
 
-.project-links a {
+.project-media .project-links a {
     display: inline-block;
-    margin-top: 0.4rem;
     padding: 0.8rem 1.6rem;
     background-color: #0077ff;
     color: #fff;
@@ -138,9 +177,33 @@ main {
     transition: background-color 0.3s ease;
 }
 
-.project-links a:hover {
-  background-color: #005fcc;
+.project-media .project-links a:hover {
+    background-color: #005fcc;
 }
+
+/* Image + légende */
+.project-media .project-images h2 {
+    margin-bottom: 1rem;
+}
+
+.project-media figure {
+    margin: 0;
+    text-align: center;
+}
+
+.project-media img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.project-media figcaption {
+    margin-top: 0.8rem;
+    font-size: 0.95rem;
+    color: #d3dce6;
+    font-style: italic;
+}
+
 
 /* Responsive */
 @media (max-width: 600px) {
