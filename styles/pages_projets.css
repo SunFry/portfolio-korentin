@@ -204,6 +204,9 @@ main {
     font-style: italic;
 }
 
+.project-images figure {
+    margin: 3.3rem;
+}
 
 /* Responsive */
 @media (max-width: 600px) {
