@@ -1,0 +1,526 @@
+@font-face {
+  font-family: 'Now';
+  src: url('fonts/Now-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Réinitialisation des marges par défaut */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Now', sans-serif;
+}
+
+body{
+    background-color: #f8f8f8;
+}
+
+header {
+    background-color: #163853;
+    padding: 10px 20px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.75);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* pour s'assurer qu'elle reste au-dessus du reste */
+}
+  
+.header-container {
+    display: flex;
+    align-items: center;
+}
+  
+.logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;      
+    object-fit: cover;       
+    margin-right: 15px;
+}
+
+header nav {
+    width: 100%;
+    max-width: 1200px;          /* largeur max du contenu */
+    margin: 0 auto;             /* centre horizontalement */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #163853;
+}
+
+/* Liste de navigation horizontale */
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+  
+/* Liens dans la liste */
+nav ul li {
+    margin-left: 40px;
+}
+  
+nav ul li a {
+    text-decoration: none;
+    color: #f8f8f8;
+    font-weight: bold;
+    font-size: 1rem;    
+    padding: 10px 15px;  
+    transition: color 0.3s ease;
+}
+  
+nav ul li a:hover {
+    color: #0077cc;
+}
+
+/* Section Intro */
+#accueil-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: 75vh; /* prend toute la hauteur de l’écran */
+  text-align: center;
+  background: linear-gradient(to bottom, #163853, #1e445f);
+  padding: 20px;
+  margin: 0.75em;
+
+  border-top-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.50)
+  
+}
+
+#accueil-intro h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #f8f8f8;
+}
+
+#accueil-intro h2 {
+  font-size: 1.8rem;
+  font-weight: normal;
+  color: #999999;
+  margin-bottom: 20px;
+}
+
+/* Style commun aux deux boutons */
+#accueil-intro a {
+  display: inline-block;
+  padding: 12px 24px;
+  margin: 10px;
+  border: 2px solid #4da6ff;         /* gris moyen pour le contour */
+  border-radius: 30px;               /* bords arrondis */
+  background-color: transparent;
+  color: #4da6ff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+/* Effet au survol */
+#accueil-intro a:hover {
+  background-color: #4da6ff;
+  color: white;
+}
+
+.button-group {
+  display: flex;
+  gap: 20px;               /* espace horizontal entre les boutons */
+  justify-content: center; /* centre les boutons */
+  flex-wrap: wrap;         /* permet de passer à la ligne sur petits écrans */
+  margin-top: 20px;
+}
+
+.button-group a {
+  display: inline-block;
+  padding: 12px 24px;
+  border: 2px solid #4da6ff;
+  border-radius: 30px;
+  background-color: transparent;
+  color: #4da6ff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.button-group a:hover {
+  background-color: #4da6ff;
+  color: white;
+}
+
+
+/* Section Contact */
+.contact-section {
+    padding: 4rem 2rem;
+    text-align: center;
+
+    background: linear-gradient(to bottom, #163853, #1e445f);
+    margin: 0.75em;
+
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.50)
+}
+
+.contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.contact-section h4 {
+    margin-bottom: 2rem;
+    color: #999999;
+}
+
+.contact-info {
+    list-style: none;
+    padding: 0;
+    font-size: 1.1rem;
+    line-height: 2;
+    color: white;
+}
+
+.contact-info a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    transition: transform 0.2s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+.icon {
+    width: 64px;
+    height: 64px;
+    transition: filter 0.2s ease;
+}
+
+.icon:hover {
+    filter: none;
+}
+
+/* Section profil */
+#description_perso {
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    
+    margin: 0 auto;
+
+    background: linear-gradient(to bottom, #163853, #1e445f);
+    margin: 0.75em;
+
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.50)
+}
+
+#description_perso article {
+    
+    padding: 2rem;
+}
+
+/* Style du texte "À propos de moi" */
+#Profil h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 2.5rem 0 1.5rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+#Profil h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #007bff; /* même couleur accent */
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
+
+#Profil {
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+#Profil p {
+    color: white;
+    line-height: 1.7;
+    text-align: justify;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#description_perso > h2 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin: 3rem 0 1.5rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+#description_perso > h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #007bff; /* couleur accent */
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
+
+/* Compétences */
+#Compétences {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center; /* Centrage horizontal */
+    padding: 1rem 0;
+}
+
+/* Chaque bloc de compétence */
+#Compétences > div {
+    flex: 1 1 300px;
+    max-width: 600px; /* Limite la largeur */
+    background-color: #f0f0f0;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+#Compétences h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #222;
+}
+
+#Compétences div h4 {
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+#Compétences div p {
+    margin: 0;
+    color: #444;
+    font-size: 0.95rem;
+}
+
+/* Responsive : une seule colonne en dessous de 768px */
+@media (max-width: 768px) {
+    #Compétences {
+        flex-direction: column;
+    }
+
+    #Compétences > div {
+        flex: 1 1 100%;
+    }
+}
+
+.competence-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.competence-grid > div {
+    
+    padding: 1rem;
+    text-align: center;
+}
+
+.competence-grid h4 {
+    margin: 0.5rem 0 0.25rem;
+    color: #007bff;
+}
+
+.competence-grid p {
+    margin: 0;
+    color: #555;
+}
+
+/* Section Portfolio */
+#Portail_portfolio {
+    text-align: center;
+    padding: 3rem 1rem;
+
+    background: linear-gradient(to bottom, #163853, #1e445f);
+    margin: 0.75em;
+
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.50)
+}
+
+/* Pour le header du portfolio */
+.portfolio-header {
+    margin-bottom: 2rem;
+}
+
+.portfolio-header h2 {
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.portfolio-header h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #007bff;
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
+
+.portfolio-header h4 {
+    font-size: 1rem;
+    color: #999999;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Pour le contenu du portfolio */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 0 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    transition: all 0.4s ease;
+    position: relative;
+    text-decoration: none;
+}
+
+.card {
+    text-decoration: none;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 376px;
+    margin: 0 auto;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.card.hidden {
+  opacity: 0;
+  transform: scale(0.5);
+  pointer-events: none;
+  position: absolute;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px; /* ou 180px selon ta préférence */
+    object-fit: cover;
+    display: block;
+}
+
+.card-description {
+    padding: 1rem;
+    text-align: center;
+}
+
+.card-description h3 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.card-description p {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+/* Pour le menu de filtre du portfolio */
+
+.portfolio-filters {
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    margin: 0 auto 20px auto;
+}
+
+.portfolio-filters button {
+    margin: 0 10px;
+    padding: 8px 16px;
+    border: none;
+    background-color: #eee;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.portfolio-filters button:hover {
+    background-color: #ccc;
+}
+
+/* Pour l'animation du menu filtre */
+
+
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 1.1rem;
+    margin-top: 4rem;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    margin: 0;
+    letter-spacing: 0.5px;
+}
